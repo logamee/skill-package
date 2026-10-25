@@ -1,0 +1,40 @@
+name: Skill behavior issue
+description: Report an unclear, inconsistent, or incorrect Skill behavior.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill
+      description: Which skill and version or commit are you using?
+      placeholder: logamee-sdd
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: What did you ask the agent to do?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Relevant context
+      description: Include only non-sensitive excerpts. Remove credentials, private data, and unrelated project files.
+    validations:
+      required: false

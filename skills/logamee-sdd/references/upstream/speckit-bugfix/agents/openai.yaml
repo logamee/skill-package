@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spec Kit Bugfix"
+  short_description: "整理测试问题并通过人工门禁完成分类、修复、验证与关闭"
+  default_prompt: "使用 $speckit-bugfix 处理我在当前项目测试中发现的问题，并在路径选择和关闭前等待我确认。"

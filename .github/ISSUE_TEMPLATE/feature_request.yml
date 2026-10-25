@@ -1,0 +1,32 @@
+name: Skill improvement
+description: Suggest a capability or workflow improvement.
+title: "[Enhancement]: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill
+      placeholder: logamee-sdd
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user need or workflow gap should this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false

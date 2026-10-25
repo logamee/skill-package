@@ -1,0 +1,4 @@
+interface:
+  display_name: "Logamee SDD"
+  short_description: "从需求澄清到实现、验收与版本迭代的统一 SDD 流程"
+  default_prompt: "使用 $logamee-sdd 推进当前项目的 SDD 工作，从当前尚未完成的阶段继续。"

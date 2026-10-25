@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/logamee/skill-package/security/advisories/new
+    about: Report vulnerabilities privately. Do not post credentials or exploit details in a public issue.

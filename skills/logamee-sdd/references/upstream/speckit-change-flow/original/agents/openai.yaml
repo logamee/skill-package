@@ -1,0 +1,4 @@
+interface:
+  display_name: "Spec Kit Change Flow"
+  short_description: "将测试问题和新增需求分流到 BugFix、主循环或混合版本"
+  default_prompt: "使用 $speckit-change-flow 处理当前项目的测试问题或新增需求。先完成人工门禁要求的路径确认；之后由 Agent 负责客观测试并在证据充分时自行关闭，只有主观验收或证据不足时才交由我测试。"

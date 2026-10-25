@@ -1,0 +1,54 @@
+{
+  "skill_name": "logamee-sdd",
+  "evals": [
+    {
+      "id": 1,
+      "name": "bootstrap-routing",
+      "prompt": "项目还没有 V1，需求和架构都在快速变化。根据一段讨论稿直接开发，AI 自己测试并记录 AI-001 问题，修复后回写开发文档。请选择模式并说明本轮读取和维护哪些文件。",
+      "expected_output": "选择 Bootstrap；维护 sdd/bootstrap/bootstrap-spec.md、plan.md 和 issues.md；说明 bootstrap-spec 记录轻量需求与产品行为规格，plan 记录轻量技术方案，issues 记录问题，以及 AI 自测、人工测试和修复回写规则。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "change-routing",
+      "prompt": "已有 sdd/specs/001-news/spec.md、plan.md 和 V1.0 基线。现在在新闻展示能力中增加按标签筛选，可能还会影响搜索能力。请说明变更类型、文档路径和实现依据。",
+      "expected_output": "进入稳定版本 Change；可影响多个 Spec；建立 sdd/changes/CHG-xxx/ 下的 target.md、proposal.md、change-spec.md；分别形成完整目标 Spec/Plan，不能只依据 change-spec.md 或孤立增量 Plan。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "first-development-routing",
+      "prompt": "新项目没有 V1 基线，但目标已经明确，希望正式形成需求简报、SPEC、Plan 并实现第一版。请选择模式并列出阶段输入和产出。",
+      "expected_output": "选择首次开发主循环，按 brief.md、spec.md、plan.md、tasks.md（按需）、实现测试、验收和版本基线推进。",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "implementation-bug-routing",
+      "prompt": "已有 SPEC 明确承诺导出文件必须包含 UTF-8 BOM，但实现导出的文件没有 BOM。判断处理路径，并说明是否修改 SPEC 或 Plan。",
+      "expected_output": "识别为实现 Bug，先记录并复现，再最小修复、测试和记录；不修改正确的 SPEC 或 Plan。",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "plan-adjustment-routing",
+      "prompt": "SPEC 的用户行为和验收目标仍然正确，但 Plan 选用的存储引擎无法满足已经确认的部署约束。判断处理路径。",
+      "expected_output": "识别为 Plan 调整；保留产品目标和 SPEC，评估并更新完整 Plan 后实现和测试。",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "mixed-bug-and-feature",
+      "prompt": "稳定版本测试发现一个已承诺的筛选行为没有实现；同时用户希望新增批量导出，并决定两项一起进入下一个版本。说明如何记录并选择流程。",
+      "expected_output": "分别记录已承诺但未实现的 Bug 和尚未承诺的新目标；由用户确认进入同一版本后，走统一 Change 主流程，不把新需求塞进 BugFix。",
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "human-acceptance-boundary",
+      "prompt": "实现了一个新设置面板。单元测试通过，但面板是否清晰、文案是否容易理解需要产品负责人判断。说明谁来完成哪些验收。",
+      "expected_output": "Agent 报告已通过的客观测试并提供具体人工验收事项；不自行宣称视觉和文案验收通过，也不把用户验收责任交给自动化测试。",
+      "files": []
+    }
+  ]
+}
